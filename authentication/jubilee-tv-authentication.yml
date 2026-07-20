@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://getjubileetv.com/.well-known/openid-configuration
+docs: https://getjubileetv.com/.well-known/oauth-authorization-server
+notes: >-
+  Authentication is Shopify Customer Accounts (OpenID Connect / OAuth 2.0),
+  provided by the commerce platform for the getjubileetv.com storefront. There is
+  no bespoke Jubilee TV developer API key or token program published. The
+  authorization server is issued under shopify.com/authentication/83104301340.
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+schemes:
+- name: ShopifyCustomerAccountsOIDC
+  type: openIdConnect
+  issuer: https://shopify.com/authentication/83104301340
+  authorization_endpoint: https://shopify.com/authentication/83104301340/oauth/authorize
+  token_endpoint: https://shopify.com/authentication/83104301340/oauth/token
+  end_session_endpoint: https://shopify.com/authentication/83104301340/logout
+  jwks_uri: https://shopify.com/authentication/83104301340/.well-known/jwks.json
+  response_types_supported: [code]
+  scopes_supported: [openid, email, 'customer-account-api:full', 'customer-account-mcp-api:full']
+  sources: [well-known/jubilee-tv-openid-configuration.json]
