@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://getjubileetv.com/.well-known/openid-configuration
+notes: >-
+  OAuth 2.0 / OIDC scopes advertised by the Shopify Customer Accounts
+  authorization server for the getjubileetv.com storefront. These are the
+  platform-provided customer-account scopes (including the agentic
+  customer-account MCP scope), not scopes on a bespoke Jubilee TV developer API.
+schemes:
+- name: ShopifyCustomerAccountsOIDC
+  source: well-known/jubilee-tv-openid-configuration.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://shopify.com/authentication/83104301340/oauth/authorize
+    tokenUrl: https://shopify.com/authentication/83104301340/oauth/token
+scopes:
+- scope: openid
+  description: OpenID Connect authentication of the customer identity
+  flows: [authorizationCode]
+- scope: email
+  description: Access to the authenticated customer's email address
+  flows: [authorizationCode]
+- scope: 'customer-account-api:full'
+  description: Full access to the Shopify Customer Account API on behalf of the customer
+  flows: [authorizationCode]
+- scope: 'customer-account-mcp-api:full'
+  description: Full access to the Shopify Customer Account MCP API for agent-driven access
+  flows: [authorizationCode]

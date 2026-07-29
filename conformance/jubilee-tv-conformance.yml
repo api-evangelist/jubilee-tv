@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://getjubileetv.com/.well-known/ucp, https://getjubileetv.com/llms.txt
+notes: >-
+  Cross-cutting standards the getjubileetv.com agentic-commerce surface conforms
+  to, evidenced by the store's published discovery documents. These reflect the
+  Shopify platform's implementation for this store. No published enterprise
+  compliance program (SOC 2 / ISO 27001 / PCI / HIPAA) was found for Jubilee TV
+  / Caavo, so no Compliance pointer is asserted.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization-server metadata at /.well-known/oauth-authorization-server
+- id: oidc
+  conforms: true
+  evidence: OIDC discovery document at /.well-known/openid-configuration
+- id: ucp
+  conforms: true
+  evidence: Universal Commerce Protocol merchant profile at /.well-known/ucp (version 2026-04-08)
+- id: mcp
+  conforms: true
+  evidence: UCP shopping MCP endpoint advertised at /api/ucp/mcp
+- id: llms-txt
+  conforms: true
+  evidence: agent instructions published at /llms.txt and /agents.md
+- id: rfc9457-problem-details
+  conforms: false

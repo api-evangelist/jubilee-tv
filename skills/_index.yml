@@ -1,0 +1,13 @@
+generated: '2026-07-19'
+method: searched
+source: https://getjubileetv.com/agents.md
+notes: >-
+  Provider-published agent instructions, saved verbatim. getjubileetv.com serves
+  a canonical /agents.md (mirrored at /llms.txt) describing how AI agents browse
+  the catalog and transact via the Shopify Universal Commerce Protocol. This is
+  the store's real agent-facing skill document, not a generated skill.
+skills:
+- file: jubilee-tv-agents.md
+  name: JubileeTV agent instructions (Shopify UCP commerce)
+  description: How AI shopping agents browse the JubileeTV storefront and complete buyer-approved checkout via the UCP shopping MCP.
+  source: https://getjubileetv.com/agents.md

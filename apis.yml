@@ -1,8 +1,30 @@
 aid: jubilee-tv
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jubilee-tv.png
 name: Jubilee TV
-description: 'Jubilee TV is a company surfaced as a portfolio company of dcm-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  JubileeTV (by Caavo) is a US consumer remote-caregiving system that turns an
+  aging loved one's existing television into a family connection and monitoring
+  hub. A caregiver uses their phone to control the senior's TV remotely, host
+  multi-way video calls on the big screen, run one-way wellness check-ins, send
+  photos and reminders, and get alerts when TV routines or room activity look
+  off. Hardware plus a subscription membership; no learning curve for the senior.
+  The company publishes no bespoke developer API, but its getjubileetv.com
+  storefront exposes a real agentic-commerce surface on Shopify: an OIDC/OAuth
+  Customer Accounts authorization server, a Universal Commerce Protocol (UCP)
+  merchant profile, a shopping MCP endpoint, and published /llms.txt and
+  /agents.md agent instructions.
 url: https://raw.githubusercontent.com/api-evangelist/jubilee-tv/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +34,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
+- Caregiving
+- Seniors
+- Smart TV
+- Video Calling
+- Agentic Commerce
+- Shopify
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +53,36 @@ maintainers:
 common:
 - type: Website
   url: https://getjubileetv.com/
+- type: Blog
+  url: https://getjubileetv.com/blogs/jubileetv
+- type: Support
+  url: https://getjubileetv.com/pages/support
+- type: Pricing
+  url: https://getjubileetv.com/products/jubilee-tv-direct
+- type: PrivacyPolicy
+  url: https://getjubileetv.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://getjubileetv.com/policies/terms-of-service
+- type: LLMsTxt
+  url: llms/jubilee-tv-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: MCPServer
+  url: mcp/jubilee-tv-mcp.yml
+- type: WellKnown
+  url: well-known/jubilee-tv-well-known.yml
+- type: Authentication
+  url: authentication/jubilee-tv-authentication.yml
+- type: OAuthScopes
+  url: scopes/jubilee-tv-scopes.yml
+- type: Conventions
+  url: conventions/jubilee-tv-conventions.yml
+- type: Conformance
+  url: conformance/jubilee-tv-conformance.yml
+- type: DomainSecurity
+  url: security/jubilee-tv-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://getjubileetv.com/.well-known/*
+host: https://getjubileetv.com
+notes: >-
+  getjubileetv.com is a Shopify-hosted storefront (store id 83104301340). The
+  discovery surface is provided by the Shopify commerce platform: OIDC / OAuth
+  authorization-server metadata for Shopify Customer Accounts, and a Universal
+  Commerce Protocol (UCP) merchant profile that advertises an agent-facing
+  shopping MCP endpoint. No bespoke Jubilee TV developer API is published.
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: jubilee-tv-openid-configuration.json
+  description: OIDC discovery for Shopify Customer Accounts (issuer shopify.com/authentication/83104301340)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: jubilee-tv-oauth-authorization-server.json
+  description: RFC 8414 OAuth 2.0 authorization-server metadata (Shopify Customer Accounts)
+- path: /.well-known/ucp
+  status: 200
+  file: jubilee-tv-ucp.json
+  description: Universal Commerce Protocol merchant profile (agentic-commerce discovery)
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
