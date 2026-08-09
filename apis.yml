@@ -13,18 +13,14 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jubilee-tv.png
 name: Jubilee TV
-description: >-
-  JubileeTV (by Caavo) is a US consumer remote-caregiving system that turns an
-  aging loved one's existing television into a family connection and monitoring
-  hub. A caregiver uses their phone to control the senior's TV remotely, host
-  multi-way video calls on the big screen, run one-way wellness check-ins, send
-  photos and reminders, and get alerts when TV routines or room activity look
-  off. Hardware plus a subscription membership; no learning curve for the senior.
-  The company publishes no bespoke developer API, but its getjubileetv.com
-  storefront exposes a real agentic-commerce surface on Shopify: an OIDC/OAuth
-  Customer Accounts authorization server, a Universal Commerce Protocol (UCP)
-  merchant profile, a shopping MCP endpoint, and published /llms.txt and
-  /agents.md agent instructions.
+description: 'JubileeTV (by Caavo) is a US consumer remote-caregiving system that turns an aging loved
+  one''s existing television into a family connection and monitoring hub. A caregiver uses their phone
+  to control the senior''s TV remotely, host multi-way video calls on the big screen, run one-way wellness
+  check-ins, send photos and reminders, and get alerts when TV routines or room activity look off. Hardware
+  plus a subscription membership; no learning curve for the senior. The company publishes no bespoke developer
+  API, but its getjubileetv.com storefront exposes a real agentic-commerce surface on Shopify: an OIDC/OAuth
+  Customer Accounts authorization server, a Universal Commerce Protocol (UCP) merchant profile, a shopping
+  MCP endpoint, and published /llms.txt and /agents.md agent instructions.'
 url: https://raw.githubusercontent.com/api-evangelist/jubilee-tv/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -34,7 +30,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-08'
 tags:
 - Company
 - Consumer
@@ -81,8 +77,14 @@ common:
   url: conformance/jubilee-tv-conformance.yml
 - type: DomainSecurity
   url: security/jubilee-tv-domain-security.yml
+- type: SignUp
+  url: https://getjubileetv.com/account/register
+- type: Login
+  url: https://getjubileetv.com/account/login
 x-enrichment:
   date: '2026-07-19'
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+x-merged-from:
+- jubileetv
